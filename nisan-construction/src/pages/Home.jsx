@@ -7,68 +7,98 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [openContact, setOpenContact] = useState(null);
 
-  const projectsData = [
-    {
-      id: 1,
-      title: "Luxury Residential Development",
-      location: "East Legon Hills",
-      category: "residential",
-      image: "./projects/residential/1.jpg",
-      description:
-        "A modern 5-bedroom luxury residential project featuring smart-home integration, swimming pool and premium interior finishing.",
-      url: "https://example.com/project1",
-    },
-    {
-      id: 2,
-      title: "Modern Townhouse Construction",
-      location: "North Legon",
-      category: "residential",
-      image: "./projects/residential/2.jpg",
-      description:
-        "Contemporary townhouse development built with high-quality materials and modern architectural design.",
-      url: "https://example.com/project2",
-    },
-    {
-      id: 3,
-      title: "Commercial Office Complex",
-      location: "Airport Area",
-      category: "commercial",
-      image: "./projects/commercial/1.jpg",
-      description:
-        "A multi-floor commercial office complex designed for corporate organizations and business operations.",
-      url: "https://example.com/project3",
-    },
-    {
-      id: 4,
-      title: "Shopping Mall Construction",
-      location: "Spintex",
-      category: "commercial",
-      image: "./projects/commercial/2.jpg",
-      description:
-        "Large scale retail development with multiple shops, parking space and modern infrastructure.",
-      url: "https://example.com/project4",
-    },
-    {
-      id: 5,
-      title: "Highway Road Construction",
-      location: "Accra - Kasoa Highway",
-      category: "infrastructure",
-      image: "./projects/infrastructure/1.jpg",
-      description:
-        "Major road construction project improving transportation and connectivity across key areas.",
-      url: "https://example.com/project5",
-    },
-    {
-      id: 6,
-      title: "Bridge Engineering Project",
-      location: "Tema",
-      category: "infrastructure",
-      image: "./projects/infrastructure/2.jpg",
-      description:
-        "Structural bridge engineering project designed to improve traffic flow and regional connectivity.",
-      url: "https://example.com/project6",
-    },
-  ];
+      const projectsData = [
+  {
+    id: 1,
+    title: "Luxury Residential Development",
+    location: "East Legon Hills",
+    category: "residential",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+    description:
+      "A modern 5-bedroom luxury residential project featuring smart-home integration, swimming pool and premium interior finishing.",
+    url: "https://example.com/project1",
+  },
+  {
+    id: 2,
+    title: "Modern Townhouse Construction",
+    location: "North Legon",
+    category: "residential",
+    image: "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=800&q=80",
+    description:
+      "Contemporary townhouse development built with high-quality materials and modern architectural design.",
+    url: "https://example.com/project2",
+  },
+  {
+    id: 3,
+    title: "Commercial Office Complex",
+    location: "Airport Area",
+    category: "commercial",
+    image: "https://images.unsplash.com/photo-1610585154340-64e3fcf8bc58?auto=format&fit=crop&w=800&q=80",
+    description:
+      "A multi-floor commercial office complex designed for corporate organizations and business operations.",
+    url: "https://example.com/project3",
+  },
+  {
+    id: 4,
+    title: "Shopping Mall Construction",
+    location: "Spintex",
+    category: "commercial",
+    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80",
+    description:
+      "Large scale retail development with multiple shops, parking space and modern infrastructure.",
+    url: "https://example.com/project4",
+  },
+  {
+    id: 5,
+    title: "Highway Road Construction",
+    location: "Accra - Kasoa Highway",
+    category: "infrastructure",
+    image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=800&q=80",
+    description:
+      "Major road construction project improving transportation and connectivity across key areas.",
+    url: "https://example.com/project5",
+  },
+  {
+    id: 6,
+    title: "Bridge Engineering Project",
+    location: "Tema",
+    category: "infrastructure",
+    image: "https://images.unsplash.com/photo-1581091215366-5e2a0b0e02c5?auto=format&fit=crop&w=800&q=80",
+    description:
+      "Structural bridge engineering project designed to improve traffic flow and regional connectivity.",
+    url: "https://example.com/project6",
+  },
+  {
+    id: 7,
+    title: "Urban Skyscraper Project",
+    location: "Accra Central Business District",
+    category: "commercial",
+    image: "https://images.unsplash.com/photo-1615910400871-cc2dbb8c1f7b?auto=format&fit=crop&w=800&q=80",
+    description:
+      "High-rise commercial skyscraper with modern facilities for offices and retail spaces.",
+    url: "https://example.com/project7",
+  },
+  {
+    id: 8,
+    title: "Luxury Waterfront Villas",
+    location: "Labadi Beach",
+    category: "residential",
+    image: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=800&q=80",
+    description:
+      "Exclusive luxury villas offering stunning ocean views and premium amenities.",
+    url: "https://example.com/project8",
+  },
+  {
+    id: 9,
+    title: "Industrial Warehouse Development",
+    location: "Tema Industrial Area",
+    category: "infrastructure",
+    image: "https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=800&q=80",
+    description:
+      "Large-scale industrial warehouse designed for storage, logistics, and manufacturing operations.",
+    url: "https://example.com/project9",
+  },
+];
 
   const cardVariants = {
     hidden: { opacity: 0, y: 40 },
