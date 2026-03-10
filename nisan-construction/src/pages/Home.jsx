@@ -230,7 +230,7 @@ Your trusted real estate partner delivering quality homes
       <FaLightbulb className="text-lg md:text-xl" /> Nisan Solutions
     </motion.a>
 
-    <div className="absolute left-full top-1/2 -translate-y-1/2 ml-3 w-56 bg-white shadow-lg rounded-lg p-3 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 z-50">
+    <div className="absolute left-full top-1/2 -translate-y-1/2 ml-3 w-56 bg-black shadow-lg rounded-lg p-3 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 z-50">
       <p className="font-semibold text-yellow-800 flex items-center gap-2">
         <FaLightbulb /> Nisan Solutions
       </p>
@@ -275,9 +275,9 @@ Your trusted real estate partner delivering quality homes
         {/* Floating Contacts */}
         <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-20">
           {[
-            { type: "phone", icon: <FaPhoneAlt />, color: "bg-yellow-600", text: "+233 123 456 789" },
-            { type: "whatsapp", icon: <FaWhatsapp />, color: "bg-green-500", text: "+233 123 456 789" },
-            { type: "email", icon: <FaEnvelope />, color: "bg-slate-800", text: "info@nisanconstructions.com" },
+            { type: "phone", icon: <FaPhoneAlt />, color: "bg-black", text: "+233 123 456 789" },
+            { type: "whatsapp", icon: <FaWhatsapp />, color: "bg-black", text: "+233 123 456 789" },
+            { type: "email", icon: <FaEnvelope />, color: "bg-black", text: "info@nisanconstructions.com" },
           ].map((item) => (
             <div key={item.type} className="relative flex items-center">
 
