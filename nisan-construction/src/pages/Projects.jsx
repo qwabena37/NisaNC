@@ -1,4 +1,4 @@
-export default function ProjectsLocations() {
+export default function Projects() {
   const projects = [
     {
       name: "East Legon Residential Project",
@@ -63,7 +63,7 @@ export default function ProjectsLocations() {
 
           <div className="w-24 h-1 bg-black mx-auto rounded mb-6"></div>
 
-          <p className="max-w-xl mx-auto text-gray-200">
+          <p className="max-w-xl mx-auto text-yellow-600">
             Discover some of our ongoing and completed construction projects
             across residential, commercial and infrastructure sectors.
           </p>
@@ -79,7 +79,7 @@ export default function ProjectsLocations() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-950 rounded-xl overflow-hidden shadow-xl hover:shadow-yellow-500/10 transition duration-500 group"
+              className="bg-black rounded-xl overflow-hidden shadow-xl hover:shadow-yellow-500/10 transition duration-500 group"
             >
 
               <div className="overflow-hidden">
@@ -92,15 +92,15 @@ export default function ProjectsLocations() {
 
               <div className="p-6">
 
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-yellow-800">
                   {project.name}
                 </h3>
 
-                <p className="text-gray-400 mt-3 text-sm leading-relaxed">
+                <p className="text-yellow-800 mt-3 text-sm leading-relaxed">
                   {project.description}
                 </p>
 
-                <button className="mt-5 px-5 py-2 bg-white text-black rounded-lg font-semibold hover:bg-yellow-400 transition transform hover:scale-105">
+                <button className="mt-5 px-5 py-2 bg-white text-black rounded-lg font-semibold hover:bg-yellow-700 transition transform hover:scale-105">
                   View Project Details
                 </button>
 

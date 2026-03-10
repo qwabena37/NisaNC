@@ -24,17 +24,17 @@ export default function Navbar() {
   // Class for desktop links with animated underline
   const linkClass = ({ isActive }) =>
   `relative pb-1 
-${scrolled ? "text-gray-700 hover:text-yellow-500" : "text-white hover:text-yellow-500"} 
+${scrolled ? "text-gray-700 hover:text-yellow-700" : "text-white hover:text-yellow-700"} 
 transition-colors duration-300
-after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-yellow-500
+after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-yellow-700
 after:transition-all after:duration-300 hover:after:w-full
-${isActive ? "after:w-full text-yellow-500 font-semibold" : ""}`
+${isActive ? "after:w-full text-yellow-700 font-semibold" : ""}`
 
   return (
     <header className="fixed top-0 w-full z-50">
       {/* Date & Time */}
       <div
-        className={`text-yellow-500 text-sm py-2 text-center transition-all duration-500 ${
+        className={`text-yellow-700 text-sm py-2 text-center transition-all duration-500 ${
           scrolled ? "bg-white shadow-lg text-black" : "bg-transparent"
         }`}
       >
@@ -54,7 +54,7 @@ ${isActive ? "after:w-full text-yellow-500 font-semibold" : ""}`
           <NavLink
             to="/"
             className={`flex items-center gap-2 text-2xl font-bold ${
-              scrolled ? "text-yellow-500" : "text-yellow-400"
+              scrolled ? "text-yellow-700" : "text-yellow-700"
             }`}
           >
             <MdConstruction />
@@ -102,14 +102,14 @@ ${isActive ? "after:w-full text-yellow-500 font-semibold" : ""}`
           <ul className="hidden md:flex gap-8 font-medium whitespace-nowrap">
             <NavLink to="/" className={linkClass}>Home</NavLink>
             <NavLink to="/about" className={linkClass}>About Us</NavLink>
-            <NavLink to="/locations" className={linkClass}>Our Projects</NavLink>
+            <NavLink to="/projects" className={linkClass}>Our Projects</NavLink>
             <NavLink to="/gallery" className={linkClass}>Gallery</NavLink>
             <NavLink to="/contact" className={linkClass}>Contact Us</NavLink>
           </ul>
 
           {/* Hamburger */}
           <button
-            className={`md:hidden text-2xl ${scrolled ? "text-green-800" : "text-white"}`}
+            className={`md:hidden text-2xl ${scrolled ? "text-black" : "text-white"}`}
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? "✕" : "☰"}
@@ -118,18 +118,18 @@ ${isActive ? "after:w-full text-yellow-500 font-semibold" : ""}`
 
         {/* Mobile Dropdown */}
         {menuOpen && (
-          <div className="md:hidden absolute right-4 top-full mt-2 w-64 bg-white shadow-xl rounded-xl p-6 flex flex-col gap-5 font-medium">
-            {["/", "/about", "/locations", "/gallery", "/contact"].map((path, i) => {
-              const titles = ["Home", "About Us", "Locations", "Our Properties", "Contact Us"];
+          <div className="md:hidden absolute right-4 top-full mt-2 w-64 bg-black shadow-xl rounded-xl p-6 flex flex-col gap-5 font-medium">
+            {["/", "/about", "/projects", "/gallery", "/contact"].map((path, i) => {
+              const titles = ["Home", "About Us", "Our Projects", "Gallery", "Contact Us"];
               return (
                 <NavLink
                   key={i}
                   to={path}
                   className={({ isActive }) =>
-                    `text-green-700 hover:text-yellow-500 pb-1 relative transition-all duration-300
-                    after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-yellow-500
+                    `text-yellow-700 hover:text-yellow-700 pb-1 relative transition-all duration-300
+                    after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-yellow-700
                     after:transition-all after:duration-300 hover:after:w-full ${
-                      isActive ? "after:w-full text-yellow-500 font-semibold" : ""
+                      isActive ? "after:w-full text-yellow-700 font-semibold" : ""
                     }`
                   }
                   onClick={() => setMenuOpen(false)}

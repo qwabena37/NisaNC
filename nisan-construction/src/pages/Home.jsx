@@ -1,6 +1,5 @@
 ﻿import { useState } from "react";
 import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaLightbulb, FaBuilding  } from "react-icons/fa";
-import { MdConstruction } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
@@ -23,7 +22,7 @@ export default function Home() {
     title: "Modern Townhouse Construction",
     location: "North Legon",
     category: "residential",
-    image: "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=800&q=80",
+    image: "./images/home.jpg",
     description:
       "Contemporary townhouse development built with high-quality materials and modern architectural design.",
     url: "https://example.com/project2",
@@ -33,7 +32,7 @@ export default function Home() {
     title: "Commercial Office Complex",
     location: "Airport Area",
     category: "commercial",
-    image: "https://images.unsplash.com/photo-1610585154340-64e3fcf8bc58?auto=format&fit=crop&w=800&q=80",
+    image: "./images/office.jpg",
     description:
       "A multi-floor commercial office complex designed for corporate organizations and business operations.",
     url: "https://example.com/project3",
@@ -43,7 +42,7 @@ export default function Home() {
     title: "Shopping Mall Construction",
     location: "Spintex",
     category: "commercial",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80",
+    image: "./images/mall.jpeg",
     description:
       "Large scale retail development with multiple shops, parking space and modern infrastructure.",
     url: "https://example.com/project4",
@@ -53,7 +52,7 @@ export default function Home() {
     title: "Highway Road Construction",
     location: "Accra - Kasoa Highway",
     category: "infrastructure",
-    image: "https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=800&q=80",
+    image: "./images/road.jpg",
     description:
       "Major road construction project improving transportation and connectivity across key areas.",
     url: "https://example.com/project5",
@@ -63,7 +62,7 @@ export default function Home() {
     title: "Bridge Engineering Project",
     location: "Tema",
     category: "infrastructure",
-    image: "https://images.unsplash.com/photo-1581091215366-5e2a0b0e02c5?auto=format&fit=crop&w=800&q=80",
+    image: "./images/bridge.jpg",
     description:
       "Structural bridge engineering project designed to improve traffic flow and regional connectivity.",
     url: "https://example.com/project6",
@@ -73,7 +72,7 @@ export default function Home() {
     title: "Urban Skyscraper Project",
     location: "Accra Central Business District",
     category: "commercial",
-    image: "https://images.unsplash.com/photo-1615910400871-cc2dbb8c1f7b?auto=format&fit=crop&w=800&q=80",
+    image: "./images/sky.jpg",
     description:
       "High-rise commercial skyscraper with modern facilities for offices and retail spaces.",
     url: "https://example.com/project7",
@@ -109,48 +108,58 @@ export default function Home() {
     const filtered = projectsData.filter((p) => p.category === category);
 
     return (
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section className="max-w-8xl bg-black shadow-yellow-800 w mx-auto px-6 py-20">
         <motion.h2
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl font-semibold text-slate-900 mb-12 border-l-4 border-black pl-4"
+          className="text-3xl font-semibold text-yellow-900 mb-12 border-l-4 border-yellow-700 pl-4"
         >
           {title}
         </motion.h2>
 
         <div className="grid md:grid-cols-3 gap-10">
           {filtered.map((project) => (
-            <motion.div
-              key={project.id}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition"
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="h-60 w-full object-cover"
-              />
+  <motion.div
+  key={project.id}
+  variants={cardVariants}
+  initial="hidden"
+  whileInView="visible"
+  className="relative group"
+>
 
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-slate-900">
-                  {project.title}
-                </h3>
+  {/* Edge Glow */}
+  <div className="absolute inset-0 rounded-xl bg-yellow-700 blur-xl opacity-15 scale-102 group-hover:opacity-30 transition duration-500"></div>
 
-                <p className="text-slate-500 mt-2 text-sm">
-                  {project.location}
-                </p>
+  {/* Card */}
+  <div className="relative bg-black rounded-xl overflow-hidden shadow-md">
+    
+    <img
+      src={project.image}
+      alt={project.title}
+      className="h-60 w-full object-cover"
+    />
 
-                <button
-                  onClick={() => setSelectedProject(project)}
-                  className="mt-6 w-full bg-gray-600 text-white py-2.5 rounded-lg font-medium hover:bg-black transition"
-                >
-                  View Project Details
-                </button>
-              </div>
-            </motion.div>
+    <div className="p-6">
+      <h3 className="text-lg font-semibold text-yellow-900">
+        {project.title}
+      </h3>
+
+      <p className="text-yellow-800 mt-2 text-sm">
+        {project.location}
+      </p>
+
+      <button
+        onClick={() => setSelectedProject(project)}
+        className="mt-6 w-full bg-white text-black py-2.5 rounded-lg font-medium hover:bg-yellow-800 transition"
+      >
+        View Project Details
+      </button>
+    </div>
+
+  </div>
+
+</motion.div>
           ))}
         </div>
       </section>
@@ -158,7 +167,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-slate-50 text-slate-900">
+    <div className="bg-slate-50 text-yellow-900">
 
       {/* HERO VIDEO */}
       <section className="relative w-full h-[100vh] overflow-hidden">
@@ -177,7 +186,7 @@ export default function Home() {
         {/* NS & NC Buttons on bottom-left */}
 <div className="absolute left-6 bottom-11 flex flex-col gap-3 md:gap-4 z-20">
 
-  {/* NC */}
+  {/* NR */}
   <div className="relative group w-fit">
     <motion.a
       whileHover={{ scale: 1.1 }}
@@ -188,14 +197,14 @@ export default function Home() {
       rel="noopener noreferrer"
       className="flex items-center gap-1 md:gap-2 
       text-sm md:text-base 
-      text-white hover:text-yellow-500 transition font-medium"
+      text-white hover:text-yellow-700 transition font-medium"
     >
       <FaBuilding className="text-lg md:text-xl" /> Nisan Realty
     </motion.a>
 
-    <div className="absolute left-full top-1/2 -translate-y-1/2 ml-3 w-56 bg-white shadow-lg rounded-lg p-3 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 z-50">
-      <p className="font-semibold text-gray-800 flex items-center gap-2">
-        <MdConstruction /> Nisan Realty
+    <div className="absolute left-full top-1/2 -translate-y-1/2 ml-3 w-56 bg-black shadow-lg rounded-lg p-3 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 z-50">
+      <p className="font-semibold text-yellow-800 flex items-center gap-2">
+        <FaBuilding /> Nisan Realty
       </p>
 
       <p className="text-gray-500 text-sm mt-1">
@@ -216,13 +225,13 @@ Your trusted real estate partner delivering quality homes
       rel="noopener noreferrer"
       className="flex items-center gap-1 md:gap-2 
       text-sm md:text-base 
-      text-white hover:text-yellow-500 transition font-medium"
+      text-white hover:text-yellow-700 transition font-medium"
     >
       <FaLightbulb className="text-lg md:text-xl" /> Nisan Solutions
     </motion.a>
 
     <div className="absolute left-full top-1/2 -translate-y-1/2 ml-3 w-56 bg-white shadow-lg rounded-lg p-3 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 z-50">
-      <p className="font-semibold text-gray-800 flex items-center gap-2">
+      <p className="font-semibold text-yellow-800 flex items-center gap-2">
         <FaLightbulb /> Nisan Solutions
       </p>
 
@@ -235,7 +244,7 @@ Your trusted real estate partner delivering quality homes
 </div>
 
         {/* Hero Text */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 text-white">
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6 text-yellow-700">
 
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -246,7 +255,7 @@ Your trusted real estate partner delivering quality homes
             Nisan Constructions
           </motion.h1>
 
-          <p className="mt-6 max-w-2xl text-lg text-gray-200">
+          <p className="mt-6 max-w-2xl text-lg text-white">
             Building world-class infrastructure through innovation, precision
             engineering and uncompromising quality craftsmanship.
           </p>
@@ -257,7 +266,7 @@ Your trusted real estate partner delivering quality homes
                 .getElementById("projects")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="mt-8 bg-gray-600 px-8 py-3 rounded-lg font-medium hover:bg-amber-700 transition"
+            className="mt-8 bg-black px-8 py-3 text-yellow-700 rounded-lg font-medium hover:bg-white transition"
           >
             View Our Projects
           </button>
@@ -276,7 +285,7 @@ Your trusted real estate partner delivering quality homes
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="absolute right-14 bg-white text-slate-900 px-4 py-2 rounded-lg shadow-lg text-sm"
+                  className="absolute right-14 bg-yellow-700 text-slate-900 px-4 py-2 rounded-lg shadow-lg text-sm"
                 >
                   {item.text}
                 </motion.div>
@@ -289,7 +298,7 @@ Your trusted real estate partner delivering quality homes
                 onClick={() =>
                   setOpenContact(openContact === item.type ? null : item.type)
                 }
-                className={`${item.color} text-white p-4 rounded-full shadow-lg`}
+                className={`${item.color} text-yellow-700 p-4 rounded-full shadow-lg`}
               >
                 {item.icon}
               </motion.button>
@@ -302,11 +311,11 @@ Your trusted real estate partner delivering quality homes
 
       {/* SERVICES INTRO */}
       <section className="bg-white text-center py-20 px-6">
-        <h2 className="text-4xl font-semibold text-slate-900">
+        <h2 className="text-4xl font-semibold text-black">
           Engineering Excellence | Structural Innovation | Quality Construction
         </h2>
 
-        <p className="mt-6 text-slate-600 max-w-3xl mx-auto leading-relaxed text-lg">
+        <p className="mt-6 text-yellow-800 max-w-3xl mx-auto leading-relaxed text-lg">
           Nisan Constructions delivers premium residential, commercial and
           infrastructure projects across Ghana. Our team combines engineering
           expertise, modern technology and industry experience to build durable
@@ -326,7 +335,7 @@ Your trusted real estate partner delivering quality homes
       <AnimatePresence>
         {selectedProject && (
           <motion.div
-            className="fixed inset-0 bg-black/60 flex items-center justify-center px-4 z-50"
+            className="fixed inset-0 bg-black/60 flex shadow-yellow-700 items-center justify-center px-4 z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -350,7 +359,7 @@ Your trusted real estate partner delivering quality homes
                   {selectedProject.title}
                 </h2>
 
-                <p className="mt-4 text-slate-600">
+                <p className="mt-4 text-black">
                   {selectedProject.description}
                 </p>
 
@@ -358,14 +367,14 @@ Your trusted real estate partner delivering quality homes
                   href={selectedProject.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 block w-full text-center bg-gray-600 text-white py-2.5 rounded-lg"
+                  className="mt-6 block w-full text-center bg-yellow-700 text-white py-2.5 rounded-lg"
                 >
                   View Full Project
                 </a>
 
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="mt-4 w-full bg-slate-800 text-white py-2.5 rounded-lg"
+                  className="mt-4 w-full bg-black text-white py-2.5 rounded-lg"
                 >
                   Close
                 </button>

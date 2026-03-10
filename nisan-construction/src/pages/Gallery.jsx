@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function ConstructionGallery() {
   const projects = [
     {
-      image: "https://images.unsplash.com/photo-1581092334803-0d8f5eea9986",
+      image: "./images/sky.jpg",
       title: "High-Rise Office Tower",
       description: "A modern office tower with sustainable building materials and advanced engineering.",
       link: "/projects/1",
@@ -64,7 +64,7 @@ export default function ConstructionGallery() {
       {/* Header Section */}
       <div className="relative h-[600px] flex items-center justify-center px-6 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1599423300746-b62533397364"
+          src="./images/project.jpg"
           alt="Construction Background"
           className="absolute inset-0 w-full h-full object-cover opacity-70 filter brightness-50 animate-fade-in-slow"
         />
@@ -73,7 +73,7 @@ export default function ConstructionGallery() {
           <h2 className="text-4xl font-bold text-white mb-3">
             Our Construction Projects
           </h2>
-          <div className="w-24 h-1 bg-black mx-auto rounded animate-pulse"></div>
+          <div className="w-24 h-1 bg-yellow-800 mx-auto rounded animate-pulse"></div>
         </div>
       </div>
 
@@ -83,7 +83,7 @@ export default function ConstructionGallery() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="relative group overflow-hidden rounded-xl shadow-lg bg-black"
+              className="relative group overflow-hidden rounded-xl shadow-lg bg-gray-950"
             >
               <img
                 src={project.image}
@@ -93,7 +93,7 @@ export default function ConstructionGallery() {
 
               {/* Caption */}
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-black">
+                <h3 className="text-lg font-semibold text-yellow-800">
                   {project.title}
                 </h3>
                 <p className="text-sm text-gray-300 mt-1">
@@ -105,7 +105,7 @@ export default function ConstructionGallery() {
               <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
                 <Link
                   to={project.link}
-                  className="bg-black text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition"
+                  className="bg-yellow-700 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-800 transition"
                 >
                   View Project
                 </Link>

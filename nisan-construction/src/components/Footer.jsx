@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   const linkStyle =
-    "text-gray-400 hover:text-white transition duration-300 hover:translate-x-1";
+    "text-gray-400 hover:text-yellow-700 transition duration-300 hover:translate-x-1";
 
   const container = {
     hidden: { opacity: 0 },
@@ -33,19 +33,19 @@ export default function Footer() {
 
         {/* Company Info */}
         <motion.div variants={item} className="flex-1 min-w-[200px]">
-          <h3 className="text-xl font-bold mb-4 text-yellow-500">
+          <h3 className="text-xl font-bold mb-4 text-white">
             NisanConstructions
           </h3>
-          <p className="text-gray-400">
+          <p className="text-yellow-700">
             Trusted construction partner delivering premium buildings, 
-            modern infrastructure, and innovative engineering solutions 
+            modern infrastructure and innovative engineering solutions 
             across Ghana.
           </p>
         </motion.div>
 
         {/* Quick Links */}
         <motion.div variants={item} className="flex-1 min-w-[150px]">
-          <h4 className="font-semibold text-yellow-500 mb-3">Quick Links</h4>
+          <h4 className="font-semibold text-white mb-3">Quick Links</h4>
           <ul className="space-y-2">
             <li>
               <NavLink to="/" className={linkStyle}>Home</NavLink>
@@ -67,8 +67,8 @@ export default function Footer() {
 
         {/* Locations */}
         <motion.div variants={item} className="flex-1 min-w-[150px]">
-          <h4 className="font-semibold text-yellow-500 mb-3">Our Locations</h4>
-          <ul className="space-y-2 text-gray-400">
+          <h4 className="font-semibold text-white mb-3">Our Locations</h4>
+          <ul className="space-y-2 text-yellow-700">
             <li>Accra</li>
             <li>Kumasi</li>
             <li>Tema</li>
@@ -79,10 +79,10 @@ export default function Footer() {
 
         {/* Services */}
         <motion.div variants={item} className="flex-1 min-w-[150px]">
-          <h3 className="text-lg font-semibold text-yellow-500 mb-4">
+          <h3 className="text-lg font-semibold text-white mb-4">
             Services
           </h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
+          <ul className="space-y-2 text-yellow-700 text-sm">
             <li>Residential & Commercial Construction</li>
             <li>Infrastructure & Road Projects</li>
             <li>Architectural Design & Engineering</li>
@@ -93,35 +93,35 @@ export default function Footer() {
 
         {/* Social Media */}
         <motion.div variants={item} className="flex-1 min-w-[150px]">
-          <h3 className="text-lg font-semibold text-yellow-500 mb-4">
+          <h3 className="text-lg font-semibold text-white mb-4">
             Follow Us
           </h3>
           <div className="flex space-x-4 text-gray-400 text-xl">
             <motion.a
               whileHover={{ scale: 1.2, rotate: 5 }}
               href="https://www.facebook.com/share/1H3wWbyGWz/?mibextid=wwXIfr/"
-              className="hover:text-yellow-500"
+              className="hover:text-yellow-700"
             >
               <FaFacebook />
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.2, rotate: -5 }}
               href="https://www.instagram.com/nisan.realty123"
-              className="hover:text-yellow-500"
+              className="hover:text-yellow-700"
             >
               <FaInstagram />
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.2, rotate: 5 }}
               href="https://www.tiktok.com/@nisanrealty123"
-              className="hover:text-yellow-500"
+              className="hover:text-yellow-700"
             >
               <FaTiktok />
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.2, rotate: -5 }}
               href="https://youtube.com/@nisan_realty"
-              className="hover:text-yellow-500"
+              className="hover:text-yellow-700"
             >
               <FaYoutube />
             </motion.a>
@@ -130,10 +130,10 @@ export default function Footer() {
 
         {/* Contact Info */}
         <motion.div variants={item} className="flex-1 min-w-[200px]">
-          <h4 className="font-semibold text-yellow-500 mb-3">Contact</h4>
-          <p className="text-gray-400">info@nisanconstructions.com</p>
-          <p className="text-gray-400">+233 123 456 789</p>
-          <p className="text-gray-400 mt-2">Spintex, Accra, Ghana</p>
+          <h4 className="font-semibold text-white mb-3">Contact</h4>
+          <p className="text-yellow-700">info@nisanconstructions.com</p>
+          <p className="text-yellow-700">+233 123 456 789</p>
+          <p className="text-yellow-700 mt-2">Spintex, Accra, Ghana</p>
         </motion.div>
 
       </div>

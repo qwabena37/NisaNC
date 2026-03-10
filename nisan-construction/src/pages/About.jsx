@@ -33,7 +33,7 @@ export default function About() {
 
         <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
           <motion.h1
-            className="text-3xl md:text-5xl font-bold text-yellow-500 text-center px-6"
+            className="text-3xl md:text-5xl font-bold text-white text-center px-6"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -41,6 +41,7 @@ export default function About() {
             About Nisan Constructions
           </motion.h1>
         </div>
+        <div className="w-24 h-1 bg-yellow-800 mx-auto rounded animate-pulse"></div>
       </section>
 
       {/* History, Vision, Mission */}
@@ -54,7 +55,7 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <div className="h-full border-4 border-yellow-500 rounded-xl overflow-hidden shadow-lg">
+          <div className="h-full border-4 border-yellow-800 rounded-xl overflow-hidden shadow-lg">
             <img
               src="./images/construct.jpg"
               alt="Construction Project"
@@ -73,7 +74,7 @@ export default function About() {
         >
 
           <motion.div variants={fadeUp}>
-            <h2 className="text-2xl font-bold text-yellow-500">
+            <h2 className="text-2xl font-bold text-yellow-800">
               Our History
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed">
@@ -85,7 +86,7 @@ export default function About() {
           </motion.div>
 
           <motion.div variants={fadeUp}>
-            <h2 className="text-2xl font-bold text-yellow-500">
+            <h2 className="text-2xl font-bold text-yellow-800">
               Our Vision
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed">
@@ -96,7 +97,7 @@ export default function About() {
           </motion.div>
 
           <motion.div variants={fadeUp}>
-            <h2 className="text-2xl font-bold text-yellow-500">
+            <h2 className="text-2xl font-bold text-yellow-800">
               Our Mission
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed">
@@ -121,7 +122,7 @@ export default function About() {
 
           <motion.h2
             variants={fadeUp}
-            className="text-3xl font-bold text-yellow-500 mb-12"
+            className="text-3xl font-bold text-yellow-800 mb-12"
           >
             Meet Our Team
           </motion.h2>
@@ -156,11 +157,11 @@ export default function About() {
                 <img
                   src={member.img}
                   alt={member.name}
-                  className="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-yellow-500"
+                  className="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-yellow-800"
                 />
 
                 <h3 className="text-xl font-semibold">{member.name}</h3>
-                <p className="text-yellow-500 text-sm">{member.role}</p>
+                <p className="text-yellow-800 text-sm">{member.role}</p>
 
               </motion.div>
 
