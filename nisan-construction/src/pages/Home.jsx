@@ -1,5 +1,5 @@
 ﻿import { useState } from "react";
-import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaLightbulb, FaBuilding  } from "react-icons/fa";
+import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaRobot, FaBuilding  } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Home() {
@@ -220,19 +220,19 @@ Your trusted real estate partner delivering quality homes
       whileHover={{ scale: 1.1 }}
       animate={{ y: [0, -6, 0] }}
       transition={{ repeat: Infinity, duration: 3, delay: 0.5 }}
-      href="https://NISAN.app/"
+      href="https://nisa-ns.vercel.app/"
       target="_blank"
       rel="noopener noreferrer"
       className="flex items-center gap-1 md:gap-2 
       text-sm md:text-base 
       text-white hover:text-yellow-700 transition font-medium"
     >
-      <FaLightbulb className="text-lg md:text-xl" /> Nisan Solutions
+      <FaRobot className="text-lg md:text-xl" /> Nisan Solutions
     </motion.a>
 
     <div className="absolute left-full top-1/2 -translate-y-1/2 ml-3 w-56 bg-black shadow-lg rounded-lg p-3 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-300 z-50">
       <p className="font-semibold text-yellow-800 flex items-center gap-2">
-        <FaLightbulb /> Nisan Solutions
+        <FaRobot /> Nisan Solutions
       </p>
 
       <p className="text-gray-500 text-sm mt-1">

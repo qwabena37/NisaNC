@@ -59,7 +59,7 @@ ${isActive ? "after:w-full text-yellow-700 font-semibold" : ""}`
           >
             <MdConstruction />
             Nisan
-            <span className={scrolled ? "text-black" : "text-white"}>Construction</span>
+            <span className={scrolled ? "text-black" : "text-white"}>Constructions</span>
           </NavLink>
 
           {/* Social Icons Desktop */}

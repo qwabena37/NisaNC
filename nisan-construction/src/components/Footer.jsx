@@ -34,7 +34,7 @@ export default function Footer() {
         {/* Company Info */}
         <motion.div variants={item} className="flex-1 min-w-[200px]">
           <h3 className="text-xl font-bold mb-4 text-white">
-            NisanConstructions
+            Nisan Constructions
           </h3>
           <p className="text-yellow-700">
             Trusted construction partner delivering premium buildings, 
