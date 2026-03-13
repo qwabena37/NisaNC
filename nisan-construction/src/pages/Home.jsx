@@ -1,6 +1,7 @@
 ﻿import { useState } from "react";
 import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaRobot, FaBuilding  } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import CountUp from "react-countup";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -386,7 +387,64 @@ Your trusted real estate partner delivering quality homes
           </motion.div>
         )}
       </AnimatePresence>
+ {/* IMPACT / ACHIEVEMENTS */}
 
+<section className="bg-black py-20 px-6">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+
+    {/* Projects Completed */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="p-8 rounded-xl shadow-md"
+    >
+      <h3 className="text-4xl font-bold text-yellow-700">
+        <CountUp end={200} duration={2} />+
+      </h3>
+
+      <p className="mt-3 text-white font-medium">
+        Construction Projects Completed
+      </p>
+    </motion.div>
+
+    {/* Skilled Workers */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+      className="p-8 rounded-xl shadow-md"
+    >
+      <h3 className="text-4xl font-bold text-yellow-700">
+        <CountUp end={100} duration={2} />+
+      </h3>
+
+      <p className="mt-3 text-white font-medium">
+        Skilled Construction Professionals
+      </p>
+    </motion.div>
+
+    {/* Engineering Solutions */}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="p-8 rounded-xl shadow-md"
+    >
+      <h3 className="text-4xl font-bold text-yellow-700">
+        <CountUp end={150} duration={2} />+
+      </h3>
+
+      <p className="mt-3 text-white font-medium">
+        Engineering & Infrastructure Solutions Delivered
+      </p>
+    </motion.div>
+
+  </div>
+</section>
     </div>
   );
 }
