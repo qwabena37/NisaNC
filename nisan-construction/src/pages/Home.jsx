@@ -389,60 +389,107 @@ Your trusted real estate partner delivering quality homes
       </AnimatePresence>
  {/* IMPACT / ACHIEVEMENTS */}
 
-<section className="bg-black py-20 px-6">
-  <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+<section className="bg-black py-24 px-6">
+  <div className="max-w-7xl mx-auto text-center">
 
-    {/* Projects Completed */}
-    <motion.div
+    {/* Section Heading */}
+    <motion.h2
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      className="p-8 rounded-xl shadow-md"
+      className="text-3xl md:text-4xl font-semibold text-yellow-700"
     >
-      <h3 className="text-4xl font-bold text-yellow-700">
-        <CountUp end={200} duration={2} />+
-      </h3>
+      Our Impact
+    </motion.h2>
 
-      <p className="mt-3 text-white font-medium">
-        Construction Projects Completed
-      </p>
-    </motion.div>
+    <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
+      Delivering measurable results through engineering excellence,
+      innovative construction practices and reliable project execution.
+    </p>
 
-    {/* Skilled Workers */}
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7 }}
-      viewport={{ once: true }}
-      className="p-8 rounded-xl shadow-md"
-    >
-      <h3 className="text-4xl font-bold text-yellow-700">
-        <CountUp end={100} duration={2} />+
-      </h3>
+    {/* Stats Grid */}
+    <div className="mt-16 grid md:grid-cols-3 gap-10">
 
-      <p className="mt-3 text-white font-medium">
-        Skilled Construction Professionals
-      </p>
-    </motion.div>
+      {/* Projects */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="relative group"
+      >
 
-    {/* Engineering Solutions */}
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-      className="p-8 rounded-xl shadow-md"
-    >
-      <h3 className="text-4xl font-bold text-yellow-700">
-        <CountUp end={150} duration={2} />+
-      </h3>
+        <div className="absolute inset-0 rounded-xl bg-yellow-700 blur-xl opacity-15 group-hover:opacity-30 transition"></div>
 
-      <p className="mt-3 text-white font-medium">
-        Engineering & Infrastructure Solutions Delivered
-      </p>
-    </motion.div>
+        <div className="relative bg-black border border-yellow-800 p-10 rounded-xl shadow-lg">
 
+          <FaBuilding className="text-yellow-700 text-3xl mx-auto mb-4" />
+
+          <h3 className="text-5xl font-bold text-yellow-700">
+            <CountUp end={200} duration={2} />+
+          </h3>
+
+          <p className="mt-4 text-white font-medium">
+            Construction Projects Completed
+          </p>
+
+        </div>
+      </motion.div>
+
+      {/* Professionals */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="relative group"
+      >
+
+        <div className="absolute inset-0 rounded-xl bg-yellow-700 blur-xl opacity-15 group-hover:opacity-30 transition"></div>
+
+        <div className="relative bg-black border border-yellow-800 p-10 rounded-xl shadow-lg">
+
+          <FaRobot className="text-yellow-700 text-3xl mx-auto mb-4" />
+
+          <h3 className="text-5xl font-bold text-yellow-700">
+            <CountUp end={100} duration={2} />+
+          </h3>
+
+          <p className="mt-4 text-white font-medium">
+            Skilled Construction Professionals
+          </p>
+
+        </div>
+      </motion.div>
+
+      {/* Solutions */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="relative group"
+      >
+
+        <div className="absolute inset-0 rounded-xl bg-yellow-700 blur-xl opacity-15 group-hover:opacity-30 transition"></div>
+
+        <div className="relative bg-black border border-yellow-800 p-10 rounded-xl shadow-lg">
+
+          <FaBuilding className="text-yellow-700 text-3xl mx-auto mb-4" />
+
+          <h3 className="text-5xl font-bold text-yellow-700">
+            <CountUp end={130} duration={2} />+
+          </h3>
+
+          <p className="mt-4 text-white font-medium">
+            Engineering & Infrastructure Solutions Delivered
+          </p>
+
+        </div>
+      </motion.div>
+
+    </div>
   </div>
 </section>
     </div>
