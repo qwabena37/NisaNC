@@ -273,40 +273,45 @@ Your trusted real estate partner delivering quality homes
           </button>
         </div>
 
-        {/* Floating Contacts */}
-        <div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-20">
-          {[
-            { type: "phone", icon: <FaPhoneAlt />, color: "bg-black", text: "+233 123 456 789" },
-            { type: "whatsapp", icon: <FaWhatsapp />, color: "bg-black", text: "+233 123 456 789" },
-            { type: "email", icon: <FaEnvelope />, color: "bg-black", text: "info@nisanconstructions.com" },
-          ].map((item) => (
-            <div key={item.type} className="relative flex items-center">
-
-              {openContact === item.type && (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  className="absolute right-14 bg-yellow-700 text-slate-900 px-4 py-2 rounded-lg shadow-lg text-sm"
-                >
-                  {item.text}
-                </motion.div>
-              )}
-
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                animate={{ y: [0, -6, 0] }}
-                transition={{ repeat: Infinity, duration: 3 }}
-                onClick={() =>
-                  setOpenContact(openContact === item.type ? null : item.type)
-                }
-                className={`${item.color} text-yellow-700 p-4 rounded-full shadow-lg`}
-              >
-                {item.icon}
-              </motion.button>
-
-            </div>
-          ))}
-        </div>
+        {/* Floating Contact Icons on right */}
+<div className="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-20">
+  {[
+    {
+      type: "phone",
+      icon: <FaPhoneAlt />,
+      color: "bg-black",
+      link: "tel:+233123456789",
+    },
+    {
+      type: "whatsapp",
+      icon: <FaWhatsapp />,
+      color: "bg-black",
+      link: "https://wa.me/233123456789",
+    },
+    {
+      type: "email",
+      icon: <FaEnvelope />,
+      color: "bg-black",
+      link: "mailto:info@nisanconstructions.com",
+    },
+  ].map((item) => (
+    <a
+      key={item.type}
+      href={item.link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <motion.button
+        whileHover={{ scale: 1.15 }}
+        animate={{ y: [0, -8, 0] }}
+        transition={{ repeat: Infinity, duration: 3 }}
+        className={`${item.color} text-yellow-800 p-4 rounded-full shadow-lg`}
+      >
+        {item.icon}
+      </motion.button>
+    </a>
+  ))}
+</div>
 
       </section>
 
